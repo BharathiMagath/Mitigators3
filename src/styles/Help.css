@@ -1,0 +1,79 @@
+.chat-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto; /* Reduced margin for better fit on smaller screens */
+  font-family: Arial, sans-serif;
+  padding: 10px; /* Added padding to prevent content from touching edges */
+  box-sizing: border-box;
+}
+
+.chat-box {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  padding: 15px; /* Adjusted padding for better fit on mobile */
+  height: 50vh; /* Height relative to viewport for better scaling */
+  overflow-y: scroll;
+  border-radius: 8px;
+}
+
+.chat-message {
+  padding: 8px; /* Reduced padding for mobile */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 80%; /* Increased max-width for better visibility on mobile */
+  word-wrap: break-word; /* Ensure long messages break to next line */
+}
+
+.chat-message.user {
+  background-color: #401d96;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-message.bot {
+  background-color: #e2e2e2;
+  color: black;
+  align-self: flex-start;
+}
+
+.input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px; /* Adjusted padding for mobile */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-container button {
+  padding: 8px; /* Adjusted padding for mobile */
+  border-radius: 5px;
+  background-color: #401d96;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  .chat-container {
+    margin: 10px auto; /* Reduced margin for very small screens */
+  }
+
+  .chat-box {
+    padding: 10px; /* Further adjusted padding for small screens */
+    height: 60vh; /* Slightly increased height for more content visibility */
+  }
+
+  .input-container input, .input-container button {
+    padding: 10px; /* Keep input fields accessible on smaller devices */
+  }
+
+  .chat-message {
+    max-width: 90%; /* Further increase max-width for smaller screens */
+  }
+}

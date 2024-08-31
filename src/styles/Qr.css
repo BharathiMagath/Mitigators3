@@ -1,0 +1,131 @@
+/* QRPage.css */
+
+.qr-page {
+    display: flex;
+    flex-direction: column; /* Stack content on smaller screens */
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Allow height to adjust based on content */
+    background-color: #000000;
+    padding: 20px;
+    position: relative;
+}
+
+.qr-left,
+.qr-right {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 20px; /* Space between sections on mobile */
+}
+
+.qr-title {
+    font-size: 2.5em; /* Adjusted for better readability on mobile */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #9663b2;
+    text-align: center; /* Center-align text on smaller screens */
+}
+
+.qr-description {
+    font-size: 1.2em; /* Adjusted for better readability on mobile */
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #9663b2;
+    text-align: center; /* Center-align text on smaller screens */
+}
+
+.qr-button {
+    font-size: 1.5em; /* Adjusted for better readability on mobile */
+    padding: 10px 20px;
+    background-color: #9668aa;
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Center-align button */
+}
+
+.qr-button:hover {
+    background-color: #020202;
+}
+
+.qr-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.qr-container {
+    width: 250px; /* Adjust width for better fit on mobile */
+    height: 250px; /* Adjust height for better fit on mobile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-text {
+    font-size: 1.5em; /* Adjusted for better readability on mobile */
+    color: #9667ac;
+    text-align: center; /* Center-align text on smaller screens */
+    margin-top: 20px;
+}
+
+/* Animation for text */
+.animated-text {
+    animation: text-animation 3s infinite;
+}
+
+@keyframes text-animation {
+    0%, 100% {
+        transform: scale(1);
+        color: #b69fba;
+    }
+    50% {
+        transform: scale(1.0);
+        color: #724d89;
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .qr-page {
+        flex-direction: row; /* Revert to row layout on larger screens */
+        height: 100vh;
+    }
+
+    .qr-left,
+    .qr-right {
+        width: 50%;
+        margin-bottom: 0; /* Remove margin for desktop layout */
+    }
+
+    .qr-title {
+        font-size: 4em; /* Larger text for desktop */
+        text-align: left; /* Align text to the left on larger screens */
+    }
+
+    .qr-description {
+        font-size: 1.5em; /* Larger text for desktop */
+        text-align: left; /* Align text to the left on larger screens */
+    }
+
+    .qr-button {
+        font-size: 1.8em; /* Larger button text for desktop */
+        margin: 0; /* Remove auto margin for desktop layout */
+    }
+
+    .qr-container {
+        width: 300px; /* Larger QR code for desktop */
+        height: 300px; /* Larger QR code for desktop */
+    }
+
+    .qr-text {
+        font-size: 2em; /* Larger text for desktop */
+    }
+}

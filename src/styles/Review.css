@@ -1,0 +1,243 @@
+/* Navbar styling */
+.navbarre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  border-bottom: 1px solid #060606;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Allow navbar content to wrap on smaller screens */
+}
+
+.navbarre-left {
+  font-weight: bold;
+  color: rgb(105, 101, 154);
+  font-size: 20px; /* Reduced font size for better readability on mobile */
+}
+
+.navbarre-right .nav-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px; /* Adjusted for better readability */
+}
+
+.navbarre-right .nav-button:hover {
+  background-color: #333;
+}
+
+/* Main container styling */
+.review-container {
+  display: flex;
+  flex-direction: column; /* Stack content on smaller screens */
+  padding: 20px;
+  background-color: #000000;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-top: 60px; /* Adjusted to prevent overlap with navbar */
+}
+
+@media (min-width: 768px) {
+  .review-container {
+      flex-direction: row; /* Revert to row layout on larger screens */
+  }
+}
+
+/* Review form and review list styling */
+.review-form,
+.review-list {
+  flex: 1;
+  max-width: 100%; /* Adjusted width for better mobile layout */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0; /* Added margin for better spacing on mobile */
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+@media (min-width: 768px) {
+  .review-form,
+  .review-list {
+      max-width: 48%; /* Revert to original width on larger screens */
+      margin: 0 10px; /* Adjust margin for larger screens */
+  }
+}
+
+.review-form:hover,
+.review-list:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 20px; /* Reduced font size for better readability */
+  font-weight: bold;
+  color: #5e5a99;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bdb6b6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px; /* Reduced font size for better readability */
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 4px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: rgb(75, 73, 110);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px; /* Adjusted for better readability */
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(119, 91, 152);
+}
+
+button[type="submit"]:active {
+  background-color: rgb(119, 91, 152);
+}
+
+/* Star rating styling */
+.star-rating {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.star {
+  cursor: pointer;
+  font-size: 20px;
+  color: #ccc;
+  transition: color 0.2s;
+}
+
+.star.selected,
+.star:hover {
+  color: orange;
+}
+
+/* Review list styling */
+.review-item {
+  position: relative;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: #000000;
+}
+
+.review-item h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-item p {
+  margin: 5px 0;
+  color: #6d6790;
+}
+
+.review-image,
+.image-preview {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.review-list h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #ff4d4d;
+}
+
+/* Delete button styling */
+.delete-button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+  transition: color 0.3s;
+}
+
+.delete-button:hover {
+  color: darkred;
+}
+
+/* Review form navigation button */
+.nav-buttonreview {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  padding: 10px 20px;
+  background-color: #7765a2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Adjusted for better readability */
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttonreview:hover {
+  background-color: #765098;
+}
